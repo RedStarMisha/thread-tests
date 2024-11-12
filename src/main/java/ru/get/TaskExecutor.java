@@ -20,4 +20,18 @@ public class TaskExecutor {
             executorService.shutdown();
         }).start();
     }
+
+    public void executeMyTask2() {
+        ExecutorService executorService = Executors.newSingleThreadExecutor();
+        Future<?> future = executorService.submit(new Mytask2());
+        new Thread(() -> {
+            try {
+                Thread.sleep(5000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            future.cancel(true);
+            executorService.shutdown();
+        }).start();
+    }
 }
