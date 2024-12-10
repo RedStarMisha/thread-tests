@@ -8,10 +8,36 @@
     <artifactId>thread-tests</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+
+
+    <distributionManagement>
+        <repository>
+            <id>reposilite-repository-releases</id>
+            <url>http://10.158.223.162:8189/releases</url>
+        </repository>
+
+    </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>reposilite-repository-releases</id>
+            <name>GET Repository</name>
+            <url>http://10.158.223.162:8189/releases</url>
+        </repository>
+    </repositories>
+
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>ru.get.mri</groupId>
+            <artifactId>base-models</artifactId>
+            <version>1.0.31</version>
+        </dependency>
+    </dependencies>
 
 </project>
