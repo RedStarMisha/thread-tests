@@ -19,5 +19,6 @@ public class Main {
             System.out.println("Поток 2 - " + conf.isTracingEnabled());
         }).start();
         System.out.println("коммит 1");
+        System.out.println("коммит 2");
     }
 }
